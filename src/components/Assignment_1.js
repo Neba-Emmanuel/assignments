@@ -7,28 +7,56 @@ const friends = [
         id: 1,
         name: 'Chinu'
     },
-    {name: 'Tony'},
-    {name: 'Harvard'},
-    {name: 'Stack'},
-    {name: 'Captain'},
-    {name: 'Rogers'},
-    {name: 'Winter'},
-    {name: 'Playback'},
+    {
+        id: 2,
+        name: 'Tony'
+    },
+    {
+        id: 3,
+        name: 'Harvard'
+    },
+    {
+        id: 4,
+        name: 'Stack'
+    },
+    {
+        id: 5,
+        name: 'Captain'
+    },
+    {
+        id: 6,
+        name: 'Rogers'
+    },
+    {
+        id: 7,
+        name: 'Winter'
+    },
+    {
+        id: 8,
+        name: 'Playback'
+    },
 ]
+
+const ListFooter = () => {
+    
+    return <Text style={styles.listStyle}>Id is: 1</Text>
+
+}
     return (
         <View style={{flex: 1, alignItems: 'center'}}>
             <Text style={{color: 'grey', fontSize: 28}}>Map Function</Text>
             <FlatList
-                keyExtractor={friend => friend.name}
+                
+                keyExtractor={friend => friend.id}
                 data={friends}
                 renderItem={({item}) => {
-                    const chinuID = item.id;
                     return(
                         <View>
                             <Text style={styles.listStyle}>Name is : {item.name}</Text>
                         </View>
                     )
                 }}
+                ListFooterComponent={ListFooter}
             />
         </View>
     );
