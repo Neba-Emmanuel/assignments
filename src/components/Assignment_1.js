@@ -5,35 +5,43 @@ const Assignment_1 = () => {
 const friends = [
     {
         id: 1,
-        name: 'Chinu'
+        name: 'Chinu',
+        age: 12
     },
     {
         id: 2,
-        name: 'Tony'
+        name: 'Tony',
+        age: 13
     },
     {
         id: 3,
-        name: 'Harvard'
+        name: 'Harvard',
+        age: 14
     },
     {
         id: 4,
-        name: 'Stack'
+        name: 'Stack',
+        age: 15
     },
     {
         id: 5,
-        name: 'Captain'
+        name: 'Captain',
+        age: 16
     },
     {
         id: 6,
-        name: 'Rogers'
+        name: 'Rogers',
+        age: 17
     },
     {
         id: 7,
-        name: 'Winter'
+        name: 'Winter',
+        age: 18
     },
     {
         id: 8,
-        name: 'Playback'
+        name: 'Playback',
+        age: 19
     },
 ]
 
@@ -46,13 +54,13 @@ const ListFooter = () => {
         <View style={{flex: 1, alignItems: 'center'}}>
             <Text style={{color: 'grey', fontSize: 28}}>Map Function</Text>
             <FlatList
-                
+                vertical={true}
                 keyExtractor={friend => friend.id}
                 data={friends}
                 renderItem={({item}) => {
                     return(
                         <View>
-                            <Text style={styles.listStyle}>Name is : {item.name}</Text>
+                            <Text style={styles.listStyle}>Name is : {item.name}, Age is : {item.age}</Text>
                         </View>
                     )
                 }}
@@ -65,7 +73,7 @@ const ListFooter = () => {
 const styles = StyleSheet.create({
     listStyle:{
         width: 250,
-        height: 50,
+        height: 70,
         marginTop: 10,
         paddingLeft: 20,        
         color: '#0096FF',
