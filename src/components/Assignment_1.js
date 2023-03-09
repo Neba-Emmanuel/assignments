@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, FlatList, StyleSheet } from 'react-native';
+import { View, Text, FlatList, StyleSheet, ScrollView } from 'react-native';
 
 const Assignment_1 = () => {
 const friends = [
@@ -53,19 +53,45 @@ const ListFooter = () => {
     return (
         <View style={{flex: 1, alignItems: 'center'}}>
             <Text style={{color: 'grey', fontSize: 28}}>Map Function</Text>
-            <FlatList
-                vertical={true}
-                keyExtractor={friend => friend.id}
-                data={friends}
-                renderItem={({item}) => {
-                    return(
-                        <View>
-                            <Text style={styles.listStyle}>Name is : {item.name}, Age is : {item.age}</Text>
-                        </View>
-                    )
-                }}
-                ListFooterComponent={ListFooter}
-            />
+            <ScrollView horizontal={false}>
+                <FlatList
+                    vertical={true}
+                    keyExtractor={friend => friend.name}
+                    data={friends}
+                    renderItem={({item}) => {
+                        return(
+                            <View>
+                                <Text style={styles.listStyle}>Name is : {item.name}</Text>
+                            </View>
+                        )
+                    }}
+                    // ListFooterComponent={ListFooter}
+                />
+                <FlatList
+                    vertical={true}
+                    keyExtractor={friend => friend.id}
+                    data={friends}
+                    renderItem={({item}) => {
+                        return(
+                            <View>
+                                <Text style={styles.listStyle}>Age is : {item.age}</Text>
+                            </View>
+                        )
+                    }}
+                />
+                <FlatList
+                    vertical={true}
+                    keyExtractor={friend => friend.age}
+                    data={friends}
+                    renderItem={({item}) => {
+                        return(
+                            <View>
+                                <Text style={styles.listStyle}>Id is : {item.id}</Text>
+                            </View>
+                        )
+                    }}
+                />
+            </ScrollView>
         </View>
     );
 }
@@ -74,7 +100,6 @@ const styles = StyleSheet.create({
     listStyle:{
         width: 250,
         height: 70,
-        marginTop: 10,
         paddingLeft: 20,        
         color: '#0096FF',
         fontWeight: 'bold',
@@ -84,6 +109,8 @@ const styles = StyleSheet.create({
         borderColor: '#0096FF',
         borderStyle: 'solid',
         textAlignVertical: 'center',
+        marginHorizontal: 40,
+        marginVertical: 10,
         
         // border: 'solid 1px blue'
     }
