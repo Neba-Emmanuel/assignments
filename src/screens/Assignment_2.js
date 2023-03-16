@@ -49,6 +49,6 @@ const styles = StyleSheet.create({
         textAlignVertical: 'center',
         marginHorizontal: 20,        
     }
-})
+});
 
 export default Assignment_2;

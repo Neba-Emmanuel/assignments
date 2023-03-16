@@ -15,6 +15,18 @@ const Home = ({navigation}) => {
                 style={styles.buttonStyle}>
                 <Text style={styles.textStyle}>Assignment 2</Text>
             </TouchableOpacity>
+
+            <TouchableOpacity 
+                onPress={() => navigation.navigate('Assignment3')}
+                style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>Assignment 3</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity 
+                onPress={() => navigation.navigate('Assignment4')}
+                style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>Assignment 4</Text>
+            </TouchableOpacity>
         </View>
     );
 }
