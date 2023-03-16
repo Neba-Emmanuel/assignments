@@ -6,6 +6,7 @@ import Assignment_1 from './src/screens/Assignment_1';
 import Assignment_2 from './src/screens/Assignment_2';
 import Assignment_3 from './src/screens/Assignment_3';
 import Assignment_4 from './src/screens/Assignment_4';
+import Assignment_5 from './src/screens/Assignment_5';
 
 const Stack = createNativeStackNavigator();
 
@@ -37,6 +38,11 @@ const App = () => {
         name="Assignment4" 
         component={Assignment_4}
         options={{title: 'Screen Four'}} 
+        />
+        <Stack.Screen 
+        name="Assignment5" 
+        component={Assignment_5}
+        options={{title: 'Screen Five'}} 
         />
       </Stack.Navigator>
     </NavigationContainer> 
