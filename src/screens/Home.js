@@ -27,6 +27,12 @@ const Home = ({navigation}) => {
                 style={styles.buttonStyle}>
                 <Text style={styles.textStyle}>Assignment 4</Text>
             </TouchableOpacity>
+
+            <TouchableOpacity 
+                onPress={() => navigation.navigate('Assignment5')}
+                style={styles.buttonStyle}>
+                <Text style={styles.textStyle}>Assignment 5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 </Text>
+            </TouchableOpacity>
         </View>
     );
 }
